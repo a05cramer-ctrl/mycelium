@@ -1,0 +1,160 @@
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: logoFloat 4s ease-in-out infinite;
+}
+
+.logo-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 20px rgba(255, 0, 255, 0.5));
+}
+
+@keyframes logoFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+/* Border pulse */
+.logo-border {
+  animation: borderPulse 3s ease-in-out infinite;
+}
+
+@keyframes borderPulse {
+  0%, 100% { stroke-width: 3; }
+  50% { stroke-width: 5; }
+}
+
+/* Mushroom breathing */
+.mushroom-cap {
+  transform-origin: center 90px;
+  animation: capBreath 3s ease-in-out infinite;
+}
+
+@keyframes capBreath {
+  0%, 100% { transform: scaleX(1) scaleY(1); }
+  50% { transform: scaleX(1.03) scaleY(0.97); }
+}
+
+/* Spots pulsing */
+.spot {
+  animation: spotPulse 2s ease-in-out infinite;
+}
+
+.spot-1 { animation-delay: 0s; }
+.spot-2 { animation-delay: 0.2s; }
+.spot-3 { animation-delay: 0.4s; }
+.spot-4 { animation-delay: 0.6s; }
+.spot-5 { animation-delay: 0.8s; }
+.spot-6 { animation-delay: 1s; }
+.spot-7 { animation-delay: 1.2s; }
+
+@keyframes spotPulse {
+  0%, 100% { 
+    opacity: 1; 
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.7; 
+    transform: scale(1.2);
+  }
+}
+
+/* Eyes wobble */
+.eyes {
+  animation: eyesWobble 4s ease-in-out infinite;
+}
+
+@keyframes eyesWobble {
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-2px) translateX(1px); }
+  75% { transform: translateY(1px) translateX(-1px); }
+}
+
+.eye-iris {
+  animation: irisGlow 2s ease-in-out infinite;
+}
+
+@keyframes irisGlow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.pupil {
+  animation: pupilMove 5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes pupilMove {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(2px, -1px); }
+  50% { transform: translate(-1px, 1px); }
+  75% { transform: translate(1px, 2px); }
+}
+
+/* Smile animation */
+.smile {
+  animation: smileGlow 2s ease-in-out infinite;
+}
+
+@keyframes smileGlow {
+  0%, 100% { 
+    stroke: #39ff14;
+    filter: url(#glow);
+  }
+  50% { 
+    stroke: #00ff41;
+    filter: url(#strongGlow);
+  }
+}
+
+/* Floating spores */
+.spore {
+  animation: sporeFloat 3s ease-in-out infinite;
+}
+
+.spore-1 { animation-delay: 0s; animation-duration: 3s; }
+.spore-2 { animation-delay: 0.5s; animation-duration: 3.5s; }
+.spore-3 { animation-delay: 1s; animation-duration: 4s; }
+.spore-4 { animation-delay: 1.5s; animation-duration: 3.2s; }
+.spore-5 { animation-delay: 0.3s; animation-duration: 3.8s; }
+.spore-6 { animation-delay: 0.8s; animation-duration: 4.2s; }
+
+@keyframes sporeFloat {
+  0%, 100% { 
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  25% {
+    transform: translate(5px, -8px) scale(1.2);
+    opacity: 0.8;
+  }
+  50% { 
+    transform: translate(-3px, -15px) scale(0.8);
+    opacity: 0.6;
+  }
+  75% {
+    transform: translate(-8px, -5px) scale(1.1);
+    opacity: 0.9;
+  }
+}
+
+/* Hover effects */
+.logo-container:hover .mushroom-cap {
+  animation: capTrip 0.5s ease-in-out;
+}
+
+@keyframes capTrip {
+  0%, 100% { filter: hue-rotate(0deg); }
+  50% { filter: hue-rotate(60deg); }
+}
+
+.logo-container:hover .spot {
+  animation: spotTrip 0.3s ease-in-out infinite;
+}
+
+@keyframes spotTrip {
+  0%, 100% { filter: hue-rotate(0deg) brightness(1); }
+  50% { filter: hue-rotate(180deg) brightness(1.5); }
+}

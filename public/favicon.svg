@@ -1,0 +1,54 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="capGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff00ff" />
+      <stop offset="50%" stop-color="#9400d3" />
+      <stop offset="100%" stop-color="#4b0082" />
+    </linearGradient>
+    <linearGradient id="stemGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e0e0e0" />
+      <stop offset="100%" stop-color="#a0a0a0" />
+    </linearGradient>
+    <radialGradient id="spotGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#39ff14" />
+      <stop offset="100%" stop-color="#00ff41" />
+    </radialGradient>
+    <linearGradient id="eyeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00f3ff" />
+      <stop offset="100%" stop-color="#0080ff" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <circle cx="100" cy="100" r="95" fill="#0a0a0a" stroke="#ff00ff" stroke-width="4"/>
+
+  <!-- Stem -->
+  <path d="M85 130 Q80 160 75 180 Q100 185 125 180 Q120 160 115 130 Z" fill="url(#stemGradient)"/>
+
+  <!-- Cap -->
+  <ellipse cx="100" cy="90" rx="60" ry="45" fill="url(#capGradient)"/>
+
+  <!-- Cap underside -->
+  <path d="M45 95 Q100 115 155 95" fill="none" stroke="#2a0040" stroke-width="4"/>
+
+  <!-- Spots -->
+  <circle cx="70" cy="70" r="8" fill="url(#spotGradient)"/>
+  <circle cx="100" cy="55" r="10" fill="url(#spotGradient)"/>
+  <circle cx="130" cy="70" r="7" fill="url(#spotGradient)"/>
+  <circle cx="85" cy="90" r="6" fill="url(#spotGradient)"/>
+  <circle cx="115" cy="85" r="8" fill="url(#spotGradient)"/>
+
+  <!-- Eyes -->
+  <ellipse cx="80" cy="100" rx="12" ry="15" fill="#000"/>
+  <ellipse cx="80" cy="100" rx="8" ry="10" fill="url(#eyeGradient)"/>
+  <circle cx="80" cy="100" r="4" fill="#000"/>
+  <circle cx="83" cy="97" r="2" fill="#fff"/>
+
+  <ellipse cx="120" cy="100" rx="12" ry="15" fill="#000"/>
+  <ellipse cx="120" cy="100" rx="8" ry="10" fill="url(#eyeGradient)"/>
+  <circle cx="120" cy="100" r="4" fill="#000"/>
+  <circle cx="123" cy="97" r="2" fill="#fff"/>
+
+  <!-- Smile -->
+  <path d="M85 115 Q100 130 115 115" fill="none" stroke="#39ff14" stroke-width="3" stroke-linecap="round"/>
+</svg>
