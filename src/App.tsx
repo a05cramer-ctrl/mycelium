@@ -23,9 +23,7 @@ function App() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
   const [spores, setSpores] = useState<Spore[]>([])
   const [trail, setTrail] = useState<TrailPoint[]>([])
-  const [audioPlaying, setAudioPlaying] = useState(false)
   const [loreVisible, setLoreVisible] = useState<number[]>([])
-  const audioRef = useRef<HTMLAudioElement>(null)
   const loreRef = useRef<HTMLDivElement>(null)
   const trailIdRef = useRef(0)
 
@@ -124,16 +122,6 @@ function App() {
     return () => observer.disconnect()
   }, [])
 
-  const toggleAudio = () => {
-    if (audioRef.current) {
-      if (audioPlaying) {
-        audioRef.current.pause()
-      } else {
-        audioRef.current.play()
-      }
-      setAudioPlaying(!audioPlaying)
-    }
-  }
 
   const scrollToLore = () => {
     loreRef.current?.scrollIntoView({ behavior: 'smooth' })
@@ -265,18 +253,11 @@ function App() {
       <section className="contract">
         <div className="contract-box">
           <span className="contract-label">CONTRACT ADDRESS</span>
-          <code className="contract-address">0xMYCELIUM...SPORE420</code>
+          <code className="contract-address">Soon</code>
           <button className="copy-btn">📋 COPY</button>
         </div>
       </section>
 
-      {/* Audio Toggle */}
-      <button className="audio-toggle" onClick={toggleAudio}>
-        {audioPlaying ? '🔊' : '🔇'} {audioPlaying ? 'MUTE TRIP' : 'ENABLE TRIP'}
-      </button>
-      <audio ref={audioRef} loop>
-        <source src="https://assets.mixkit.co/active_storage/sfx/2515/2515-preview.mp3" type="audio/mpeg" />
-      </audio>
 
       {/* Footer */}
       <footer className="footer">
