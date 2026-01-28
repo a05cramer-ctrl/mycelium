@@ -253,7 +253,7 @@ function App() {
       <section className="contract">
         <div className="contract-box">
           <span className="contract-label">CONTRACT ADDRESS</span>
-          <code className="contract-address">F8vwz4vS3QDK9WwhefAfETHA7M2BL7BsgBF8w2m9bonk</code>
+          <code className="contract-address">J5MwLMxj74xLFr1oF9s3ckYB3yTpvi5V5wnXm5JZbonk</code>
           <button className="copy-btn">📋 COPY</button>
         </div>
       </section>
